@@ -104,13 +104,7 @@ async function generateBlog() {
     - Pad the intro with unnecessary context before getting to the point.
     - Use overly complex words when simple ones work better (avoid corporate-speak: "leverage," "synergy," "utilize").
     
-    4. You MUST return a JSON object with EXACTLY this structure, and no other text:
-    {
-      "title": "The Title of the Blog",
-      "slug": "url-friendly-slug",
-      "excerpt": "A short meta description.",
-      "markdown_content": "The full article in markdown format, using # and ## for headers. Do not include front-matter in this field, just the body."
-    }
+    4. Adhere strictly to the OUTPUT FORMAT defined in the Master Rules above.
   `;
 
   console.log("Calling Gemini API...");
@@ -163,10 +157,13 @@ async function generateBlog() {
     // Create the markdown file with front-matter
     const date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     
+    const excerptText = data.meta_description || data.excerpt || "New Blog Post";
     const fileContent = `---
-title: "${data.title.replace(/"/g, '\\"')}"
+title: "${(data.title || 'Untitled').replace(/"/g, '\\"')}"
 date: "${date}"
-excerpt: "${data.excerpt.replace(/"/g, '\\"')}"
+excerpt: "${excerptText.replace(/"/g, '\\"')}"
+seo_score: ${data.seo_score || 100}
+primary_keyword: "${(data.primary_keyword || '').replace(/"/g, '\\"')}"
 ---
 
 ${data.markdown_content}
