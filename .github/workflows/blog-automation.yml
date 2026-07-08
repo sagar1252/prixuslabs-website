@@ -2,8 +2,8 @@ name: Autonomous Blog Automation
 
 on:
   schedule:
-    # Run every Wednesday at 17:00 UTC
-    - cron: '0 17 * * 3'
+    # Run every day at 12:00 UTC (5:30 PM IST)
+    - cron: '0 12 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
