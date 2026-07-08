@@ -75,6 +75,20 @@ async function generateBlog() {
 
   console.log("Calling Gemini API...");
   
+  try {
+    console.log("Fetching list of available models for this API key...");
+    const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models?key=' + API_KEY);
+    const data = await response.json();
+    if (data.models) {
+      console.log("Available models:");
+      data.models.forEach(m => console.log(m.name));
+    } else {
+      console.log("Model fetch response:", JSON.stringify(data, null, 2));
+    }
+  } catch (e) {
+    console.log("Could not fetch model list:", e.message);
+  }
+
   const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
   let result = null;
   let responseText = "";
