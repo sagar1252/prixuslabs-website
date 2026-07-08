@@ -64,6 +64,12 @@ async function generateBlog() {
     1. Discover a highly trending, high-value B2B tech topic related to Custom Web Development, AI Integration, React, Next.js, etc.
     2. Write a 100% original, deeply technical, SEO-optimized article.
     3. Do NOT include any images. The website does not render featured images anymore.
+    
+    CRITICAL WRITING RULES:
+    - Persona: You are a Senior Solutions Architect at Prixus Labs. Speak directly to CTOs and VP-level engineers. Use highly technical terminology, but explain concepts through the lens of business ROI and cost-savings.
+    - Banned Words: Do NOT use these words under any circumstances: realm, landscape, delve, navigate, paramount, unleash, supercharge, tapestry, robust. Write with a punchy, direct, and authoritative tone.
+    - Formatting: No paragraph can be longer than 3 sentences. You must use at least 3 bulleted lists. Always include a 'Key Takeaways' section near the top.
+    
     4. You MUST return a JSON object with EXACTLY this structure, and no other text:
     {
       "title": "The Title of the Blog",
