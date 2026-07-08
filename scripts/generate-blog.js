@@ -89,7 +89,7 @@ async function generateBlog() {
     console.log("Could not fetch model list:", e.message);
   }
 
-  const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
+  const modelsToTry = ["gemini-3.1-flash-lite", "gemini-3.5-flash", "gemini-2.5-flash"];
   let result = null;
   let responseText = "";
 
