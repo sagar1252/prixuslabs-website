@@ -1,5 +1,5 @@
 import FadeIn from '../components/FadeIn';
-import { Globe, Bot, CalendarDays, Users, Target, Cpu, Star, BarChart3 } from 'lucide-react';
+import { Globe, Bot, CalendarDays, Users, Target, Cpu, Star, BarChart3, Newspaper } from 'lucide-react';
 
 const SERVICES = [
   {
@@ -57,6 +57,13 @@ const SERVICES = [
     name: 'Business Analytics Dashboard',
     description:
       'Transform business data into actionable insights. Monitor website performance, lead generation, appointments, customer engagement, and overall business growth through a centralized analytics dashboard.',
+  },
+  {
+    number: '09',
+    icon: <Newspaper className="w-10 h-10 sm:w-12 sm:h-12 text-[#0C0C0C]" />,
+    name: 'Autonomous SEO Growth Agent',
+    description:
+      'Scale your content marketing effortlessly. We deploy intelligent AI agents that continuously discover trending topics, research high-value keywords, and autonomously write, optimize, and publish SEO-driven articles to your website to generate organic traffic and qualified business leads.',
   },
 ];
 
