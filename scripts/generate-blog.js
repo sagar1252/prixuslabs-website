@@ -74,18 +74,35 @@ async function generateBlog() {
   `;
 
   console.log("Calling Gemini API...");
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   
+  const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
+  let result = null;
+  let responseText = "";
+
   try {
-    const result = await model.generateContent({
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: {
-        responseMimeType: "application/json",
+    for (const modelName of modelsToTry) {
+    try {
+      console.log(`Trying model: ${modelName}...`);
+      const model = genAI.getGenerativeModel({ model: modelName });
+      result = await model.generateContent({
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: {
+          responseMimeType: "application/json",
+        }
+      });
+      responseText = result.response.text();
+      console.log(`Successfully generated content using ${modelName}`);
+      break; // Success, exit the loop
+    } catch (error) {
+      console.error(`Error with model ${modelName}:`, error.message);
+      // If it's the last model in the array, throw the error
+      if (modelName === modelsToTry[modelsToTry.length - 1]) {
+        throw error;
       }
-    });
-    
-    const responseText = result.response.text();
-    const data = JSON.parse(responseText);
+    }
+  }
+  
+  const data = JSON.parse(responseText);
     
     console.log(`Generated Blog: ${data.title}`);
     
