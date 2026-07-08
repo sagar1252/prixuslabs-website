@@ -31,15 +31,15 @@ function loadEnv() {
 }
 
 const env = loadEnv();
-const email = env['SMTP_EMAIL'];
-let password = env['SMTP_PASSWORD'];
+const email = process.env.SMTP_EMAIL || env['SMTP_EMAIL'];
+let password = process.env.SMTP_PASSWORD || env['SMTP_PASSWORD'];
 
 if (password) {
   password = password.replace(/\s+/g, '');
 }
 
 if (!email || !password) {
-  console.error("Missing SMTP_EMAIL or SMTP_PASSWORD in .env");
+  console.error("Missing SMTP_EMAIL or SMTP_PASSWORD in .env or environment");
   process.exit(1);
 }
 
