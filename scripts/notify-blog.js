@@ -57,6 +57,7 @@ const transporter = nodemailer.createTransport({
 const args = process.argv.slice(2);
 const blogTitle = args[0] || "New Blog Post";
 const blogSlug = args[1] || "";
+const seoScore = args[2] || "N/A";
 
 const mailOptions = {
   from: email,
@@ -74,6 +75,10 @@ const mailOptions = {
         
         <p style="font-size: 16px; color: #374151; line-height: 1.5;">
           <strong>Title:</strong> <span style="color: #111827;">${blogTitle}</span>
+        </p>
+
+        <p style="font-size: 16px; color: #374151; line-height: 1.5;">
+          <strong>SEO Score:</strong> <span style="color: #10b981; font-weight: bold;">${seoScore}/100</span>
         </p>
         
         <p style="font-size: 16px; color: #374151; line-height: 1.5;">

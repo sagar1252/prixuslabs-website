@@ -176,7 +176,7 @@ ${data.markdown_content}
     // Trigger Notification
     console.log("Triggering email notification...");
     try {
-      execSync(`node scripts/notify-blog.js "${data.title}" "${data.slug}"`, { stdio: 'inherit', cwd: ROOT_DIR });
+      execSync(`node scripts/notify-blog.js "${data.title}" "${data.slug}" "${data.seo_score || 'N/A'}"`, { stdio: 'inherit', cwd: ROOT_DIR });
     } catch (e) {
       console.error("Failed to send notification email. This is non-fatal.");
     }
