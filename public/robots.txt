@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prixuslabs.com/sitemap.xml
