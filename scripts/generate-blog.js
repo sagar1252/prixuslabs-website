@@ -62,13 +62,47 @@ async function generateBlog() {
 
     Task:
     1. Discover a highly trending, high-value B2B tech topic related to Custom Web Development, AI Integration, React, Next.js, etc.
-    2. Write a 100% original, deeply technical, SEO-optimized article.
-    3. Do NOT include any images. The website does not render featured images anymore.
-    
-    CRITICAL WRITING RULES:
-    - Persona: You are a Senior Solutions Architect at Prixus Labs. Speak directly to CTOs and VP-level engineers. Use highly technical terminology, but explain concepts through the lens of business ROI and cost-savings.
-    - Banned Words: Do NOT use these words under any circumstances: realm, landscape, delve, navigate, paramount, unleash, supercharge, tapestry, robust. Write with a punchy, direct, and authoritative tone.
-    - Formatting: No paragraph can be longer than 3 sentences. You must use at least 3 bulleted lists. Always include a 'Key Takeaways' section near the top.
+    2. Write a 100% original, deeply technical, SEO-optimized article following the specifications below.
+    3. Do NOT include any images.
+
+    SPECIFICATIONS:
+    CONTEXT
+    - Target audience: CTOs, Founders, and business owners aged 25-55 exploring digital transformation and AI.
+    - Reader's pain point: Confused about which tech stack to invest in, how to automate business processes, or struggling with scale.
+    - Business goal of this post: Generate leads for our web development and AI integration services.
+    - Funnel stage: Consideration / Decision
+
+    TOPIC & ANGLE
+    - Primary topic: The trending tech topic you discovered in Step 1.
+    - Unique angle/POV: Take a contrarian stance — most guides oversimplify this.
+    - Keywords: Discover and target 1 primary keyword and 3-5 secondary keywords naturally.
+
+    STRUCTURE
+    - Hook: Open with a specific, punchy insight or question in the first 2 sentences — no generic scene-setting.
+    - Length: 800-1200 words.
+    - Format: Use H2/H3 subheadings, short paragraphs (2-3 sentences max), bullet points where useful.
+    - Include: 1 real-world example or case study, 1 data point/statistic (cite source), 1 actionable takeaway per section.
+    - End with: A clear, non-salesy CTA tied to Prixus Labs development services.
+
+    TONE & STYLE
+    - Voice: Confident, direct, slightly informal — like a smart friend, not a textbook.
+    - Avoid corporate jargon and fluff.
+    - Write in active voice.
+    - Vary sentence length to keep rhythm natural (not robotic).
+
+    DO NOT:
+    - Start with generic phrases like "In today's fast-paced digital world..." or "In this blog, we will discuss..."
+    - Use filler transition phrases like "Moreover," "Furthermore," "In conclusion," repeatedly.
+    - Make vague claims without data ("many studies show," "experts agree") — cite specifics or don't claim it.
+    - Use listicle clichés like "10 Amazing Tips You Won't Believe".
+    - Over-explain basic concepts the target audience already knows.
+    - Repeat the same idea in different words to hit a word count.
+    - Use excessive exclamation points or hype language ("game-changing," "revolutionary," "unlock the secret").
+    - Write generic CTAs like "Contact us today!" — tie the CTA to a specific value/outcome.
+    - Sound like it was written by 5 different people — maintain one consistent voice throughout.
+    - Include disclaimers, meta-commentary about being an AI, or "I hope this helps!"
+    - Pad the intro with unnecessary context before getting to the point.
+    - Use overly complex words when simple ones work better (avoid corporate-speak: "leverage," "synergy," "utilize").
     
     4. You MUST return a JSON object with EXACTLY this structure, and no other text:
     {
