@@ -161,7 +161,7 @@ async function generateBlog() {
     const fileContent = `---
 title: "${(data.title || 'Untitled').replace(/"/g, '\\"')}"
 date: "${date}"
-excerpt: "${excerptText.replace(/"/g, '\\"')}"
+description: "${excerptText.replace(/"/g, '\\"')}"
 seo_score: ${data.seo_score || 100}
 primary_keyword: "${(data.primary_keyword || '').replace(/"/g, '\\"')}"
 ---

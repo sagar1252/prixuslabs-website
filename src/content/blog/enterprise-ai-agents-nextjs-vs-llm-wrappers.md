@@ -1,7 +1,7 @@
 ---
 title: "Why Generic LLM Wrappers Fail: Building Enterprise-Grade AI Agents in Next.js"
 date: "July 8, 2026"
-excerpt: "Stop wasting budget on simple LLM wrappers. Learn why enterprise-grade AI agent development requires custom architectures using Next.js and secure API integration."
+description: "Stop wasting budget on simple LLM wrappers. Learn why enterprise-grade AI agent development requires custom architectures using Next.js and secure API integration."
 seo_score: 98
 primary_keyword: "AI Agent Development"
 ---
