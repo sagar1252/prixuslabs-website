@@ -57,11 +57,12 @@ async function generateBlog() {
     Here are your Master Rules from the system config:
     ${rules}
     
-    Existing blog topics we have already covered (DO NOT REPEAT THESE):
+    Existing blog topics we have already covered (CRITICAL: DO NOT REPEAT OR OVERLAP WITH THESE TOPICS):
     ${existingBlogs.join(', ')}
 
     Task:
     1. Discover a highly trending, high-value B2B tech topic related to Custom Web Development, AI Integration, React, Next.js, etc.
+       - CRITICAL RULE: You MUST pick a completely fresh, unexplored sub-niche that does not overlap with the existing blogs listed above. If we already have a blog about AI wrappers or Next.js AI integration, DO NOT write about it again.
     2. Write a 100% original, deeply technical, SEO-optimized article following the specifications below.
     3. Do NOT include any images.
 
